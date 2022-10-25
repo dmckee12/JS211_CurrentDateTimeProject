@@ -15,11 +15,12 @@ const displayDate = () => {
  
 
 // Write a JavaScript program to convert a number to a string.
-
-
+let num1 = document.getElementById("first-Number").value
+let num2 = document.getElementById("second-Number").value
+console.log(num1.value, num2.value)
 
 // Write a JavaScript program to convert a string to the number.
-
+const numToString = (num1) =>{}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -33,11 +34,11 @@ const displayDate = () => {
 
   
 // Write a JavaScript program that adds 2 numbers together.
-
+const add = (num1, num2) => {num1 = num2};
 
 
 // Write a JavaScript program that runs only when 2 things are true.
-
+const bothTrue =(a, b) =>a && b;
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
@@ -49,6 +50,54 @@ const displayDate = () => {
 // ***************************
 //         PART TWO
 // ***************************
+let firstNum = null
+let secondNum = null
+let operation = null
+
+const saveFirstNumber = (num) => {
+  firstNum = parseInt(num)
+}
+
+const saveSecondNumber = (num) => {
+ secondNum = parseInt(num)
+}
+
+const add2 = (numA, numB) => {
+  const sum = numA + numB
+  return sum
+}
+
+function changeOperation(chosenOperation){
+console.log("chosenOperation", operation)
+operation = chosenOperation
+console.log("operation", operation)
+console.log(operation)
+}
+
+// const putResultInElement = (operationResults) =>{
+//   document.getElementById("result").innnerHTML = "Results: " + operationResults
+// }
+
+// const equals = () => {
+//   switch(operation) {
+//     case "addition" : putResultInElement(add2(firstNum, secondNum))
+//     break;
+//     default: "Choose an operation"
+//   }
+// }
+const solution = add2(firstNum, secondNum)
+const putResultInElement = (solution) =>{
+  document.getElementById("result").innnerHTML = "results: " +solution
+}
+const equals = () => {
+  switch(operation) {
+    case "addition" : putResultInElement()
+    break;
+    default: "Choose an operation"
+  }
+}
+console.log(solution)
+
 
 // 1. download Live-Server by Ritwick Dey, 
 // 2. reload VS Code, 
